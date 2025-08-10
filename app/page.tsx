@@ -49,7 +49,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="section areas-highlight" aria-labelledby="uzmanlik-ozet" id="icerik">
+      <section className="section areas-highlight" aria-labelledby="uzmanlik-ozet">
         <div className="container areas-highlight-inner">
           <h2 id="uzmanlik-ozet">Uzmanlık Alanlarımız</h2>
           <div className="areas-grid" role="list">

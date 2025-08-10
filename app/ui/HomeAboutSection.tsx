@@ -4,7 +4,8 @@ export default function HomeAboutSection(){
       <div className="container home-about-square">
         <div className="home-about-square-media">
           <figure className="about-media home-about-square-figure" style={{margin:0}}>
-            <img src="/baro.jpg" alt="Büro temsili görsel" />
+            {/* Görsel yolu güncellendi (baro.jpg 404 veriyordu) */}
+            <img src="/members/placeholder.jpg" alt="Büro temsili görsel" />
             <figcaption>Büro temsili</figcaption>
           </figure>
         </div>
