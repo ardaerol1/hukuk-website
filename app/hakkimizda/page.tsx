@@ -21,8 +21,7 @@ export default function AboutPage(){
           </div>
           <div>
             <figure className="about-media">
-              <img src="/office/office2.jpg" alt="Büro temsili görsel" />
-              <figcaption>Büro temsili</figcaption>
+              <img src="/office/office2.jpg"/>
             </figure>
           </div>
         </div>

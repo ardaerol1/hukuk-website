@@ -3,9 +3,9 @@ export default function HomeAboutSection(){
     <section className="section" aria-labelledby="hakkimizda-ozet">
       <div className="container home-about-square">
         <div className="home-about-square-media">
-          <figure className="about-media home-about-square-figure" style={{margin:0}}>
-            <img src="/office/office1.jpg" alt="Büro temsili görsel" />
-            <figcaption>Büro temsili</figcaption>
+          <figure className="about-media home-about-square-figure home-about-photo" style={{margin:0}}>
+            <img className="home-about-photo-img" src="/office/office1.jpg" alt="Büro görsel" />
+            <figcaption>Büro</figcaption>
           </figure>
         </div>
         <div className="home-about-square-text">

@@ -18,20 +18,22 @@ export default function TeamPage(){
       <section className="section" aria-labelledby="team-title">
         <div className="container">
           <h2 id="team-title" className="visually-hidden">Liste</h2>
-          <ul className="team-list" style={{listStyle:'none',padding:0,margin:'1.5rem 0',display:'flex',flexDirection:'column',gap:'1.25rem'}}>
+      <ul className="team-list">
             {MEMBERS.map(m => (
-              <li key={m.name} className="team-item" style={{display:'flex',gap:'1rem',alignItems:'flex-start',background:'var(--surface)',border:'1px solid var(--border)',padding:'1rem 1.1rem',borderRadius:'14px'}}>
-                <Image src={m.photo} alt={m.name} width={72} height={72} style={{borderRadius:'50%',objectFit:'cover',flexShrink:0}} />
-                <div>
-                  <h3 style={{margin:'0 0 .35rem',fontSize:'1.05rem'}}>{m.name}</h3>
-                  <p style={{margin:'0 0 .5rem',fontSize:'.85rem',fontWeight:600,color:'var(--brand)'}}>{m.role}</p>
-                  <p style={{margin:'0 0 .35rem',fontSize:'.75rem',fontWeight:600}}>Eğitim:</p>
-                  <ul style={{margin:'0 0 .55rem',paddingLeft:'1.1rem',fontSize:'.75rem'}}>
+        <li key={m.name} className="team-item">
+                <div className="team-photo-box">
+                  <Image src={m.photo} alt={m.name} width={240} height={320} />
+                </div>
+                <div className="team-body">
+                  <h3 className="team-name">{m.name}</h3>
+                  <p className="team-role">{m.role}</p>
+                  <p className="team-label">Eğitim</p>
+                  <ul className="team-edu">
                     {m.education.map(ed => <li key={ed}>{ed}</li>)}
                   </ul>
-                  <p style={{margin:'0 0 .3rem',fontSize:'.75rem',color:'var(--text-muted)'}}>Yabancı Diller: {m.langs.join(', ')}</p>
-                  <p style={{margin:'0 0 .3rem',fontSize:'.75rem'}}>Baroya Kayıt: {m.barYear}</p>
-                  <p style={{margin:0,fontSize:'.75rem'}}>E-posta: <a href={`mailto:${m.email}`}>{m.email}</a></p>
+                  <p className="team-meta">Yabancı Diller: {m.langs.join(', ')}</p>
+                  <p className="team-meta">Baroya Kayıt: {m.barYear}</p>
+                  <p className="team-meta">E-posta: <a href={`mailto:${m.email}`}>{m.email}</a></p>
                 </div>
               </li>
             ))}

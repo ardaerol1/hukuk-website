@@ -40,8 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="tr" className={`${openSans.variable} ${playfair.variable} ${themeClass}`}> 
       <head>
-        {/* Hızlı inline script (cookie yoksa localStorage fallback) */}
-        <script dangerouslySetInnerHTML={{__html:`(function(){try{var c=document.cookie.match(/(^| )pref-theme=([^;]+)/);var cv=c?c[2]:null;var ls=localStorage.getItem('pref-theme');var m=window.matchMedia('(prefers-color-scheme: dark)').matches;var useDark=(cv==='dark')||( !cv && ls==='dark')||(!cv && !ls && m);if(useDark)document.documentElement.classList.add('dark');}catch(e){}})();`}} />
+  <script dangerouslySetInnerHTML={{__html:`(function(){try{var c=document.cookie.match(/(^| )pref-theme=([^;]+)/);var cv=c?c[2]:null;var ls=localStorage.getItem('pref-theme');var useDark=(cv==='dark')||(!cv && ls==='dark');if(useDark){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark');}}catch(e){}})();`}} />
         {/* JSON-LD script */}
         <Script id="ld-org" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
