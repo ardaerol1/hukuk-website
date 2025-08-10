@@ -5,7 +5,7 @@ import { Open_Sans, Playfair_Display } from 'next/font/google';
 import Script from 'next/script';
 import { SITE_NAME, DISCLAIMER, CONTACT_INFO, SOCIAL_LINKS } from './lib/constants';
 import { cookies } from 'next/headers';
-import DarkModeToggle from './ui/DarkModeToggle'; // dynamic yerine direkt import
+import NavMenu from './ui/NavMenu';
 
 const openSans = Open_Sans({ subsets: ['latin'], variable: '--font-sans' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-serif' });
@@ -57,16 +57,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <header className="site-header">
           <div className="container header-inner">
             <a href="/" className="logo" aria-label="Ana Sayfa">{SITE_NAME}</a>
-            <nav aria-label="Ana menü">
-              <ul className="main-nav">
-                {MAIN_NAV.map(i => (
-                  <li key={i.href}>
-                    <a href={i.href} className={i.cta ? 'cta' : undefined}>{i.label}</a>
-                  </li>
-                ))}
-                <li><DarkModeToggle variant="nav" initialDark={initialDark} /></li>
-              </ul>
-            </nav>
+            <NavMenu items={MAIN_NAV} initialDark={initialDark} />
           </div>
         </header>
         <main id="icerik" tabIndex={-1}>{children}</main>
