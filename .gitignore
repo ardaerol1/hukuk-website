@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+.next/cache/
+.next/static/
+out/
+build/
+
+# Production build (if used)
+dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Testing / Coverage
+coverage/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local secrets / misc
+*.local
+
+# Vercel / Deploy
+.vercel/
+
+# Turbo / Task caches
+.turbo/
+
+# Lint / Formatter caches
+.eslintcache
+.stylelintcache
+
+# Editor folders
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional lockfiles (keep the one you use)
+# yarn.lock
+# package-lock.json
+# pnpm-lock.yaml
