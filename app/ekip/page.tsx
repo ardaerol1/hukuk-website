@@ -4,9 +4,9 @@ import Image from 'next/image';
 interface Member { name:string; role:string; langs:string[]; photo:string; education:string[]; barYear:number; email:string }
 
 const MEMBERS: Member[] = [
-  { name:'Av. Örnek Kişi', role:'Kurucu Ortak', langs:['TR','EN'], photo:'/members/placeholder.jpg', education:['İstanbul Üniversitesi Hukuk Fakültesi','Galatasaray Üniversitesi (LL.M)'], barYear:2012, email:'ornek@domain.com' },
-  { name:'Av. İkinci Üye', role:'Kıdemli Avukat', langs:['TR','EN','DE'], photo:'/members/placeholder.jpg', education:['Ankara Üniversitesi Hukuk Fakültesi'], barYear:2015, email:'ikinci@domain.com' },
-  { name:'Av. Genç Uzman', role:'Avukat', langs:['TR','EN'], photo:'/members/placeholder.jpg', education:['Marmara Üniversitesi Hukuk Fakültesi'], barYear:2021, email:'genc@domain.com' }
+  { name:'Av. Örnek Kişi', role:'Kurucu Ortak', langs:['TR','EN'], photo:'/members/lawyer1.jpg', education:['İstanbul Üniversitesi Hukuk Fakültesi','Galatasaray Üniversitesi (LL.M)'], barYear:2012, email:'ornek@domain.com' },
+  { name:'Av. İkinci Üye', role:'Kıdemli Avukat', langs:['TR','EN','DE'], photo:'/members/lawyer2.jpg', education:['Ankara Üniversitesi Hukuk Fakültesi'], barYear:2015, email:'ikinci@domain.com' },
+  { name:'Av. Genç Uzman', role:'Avukat', langs:['TR','EN'], photo:'/members/lawyer3.jpg', education:['Marmara Üniversitesi Hukuk Fakültesi'], barYear:2021, email:'genc@domain.com' }
 ];
 
 export const metadata = { title: 'Ekip | Hukuk Bürosu' };
